@@ -174,7 +174,9 @@ const Certifications = () => {
                 React.createElement(
                   "a",
                   {
-                    href: "#",
+                    href: "https://www.linkedin.com/in/linopolo/?miniProfileUrn=urn%3Ali%3Afsd_profile%3AACoAADL_qsEBE0WNufJuMpNbYVzFTU-SCp_9swU",
+                    target: "_blank",
+                    rel: "noopener noreferrer",
                     className:
                       "inline-flex items-center text-emerald-600 hover:text-emerald-700",
                   },
