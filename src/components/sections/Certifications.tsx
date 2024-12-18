@@ -10,14 +10,13 @@ const Certifications = () => {
   return (
     <section id="certifications" className="py-16 bg-gray-50">
       <div className="container mx-auto px-4">
-        <h2 className="text-3xl font-bold text-gray-900 mb-8 transform transition-all duration-500 ease-in-out">
+        <h2 className="text-3xl font-bold text-gray-900 mb-8">
           {t.certifications.title}
         </h2>
 
         {/* CompTIA Certifications */}
         <div className="grid grid-cols-1 md:grid-cols-3 gap-6 mb-12">
-          {/* CompTIA Security+ */}
-          <div className="bg-white p-6 rounded-lg shadow-sm border transform transition-all duration-300 ease-in-out hover:scale-[1.02] hover:shadow-lg">
+          <div className="bg-white p-6 rounded-lg shadow-sm border hover:shadow-md transition-shadow">
             <div className="flex items-center justify-between mb-4">
               <Award className="w-8 h-8 text-emerald-600" />
               <Image
@@ -36,8 +35,7 @@ const Certifications = () => {
             </p>
           </div>
 
-          {/* CompTIA Linux+ */}
-          <div className="bg-white p-6 rounded-lg shadow-sm border transform transition-all duration-300 ease-in-out hover:scale-[1.02] hover:shadow-lg">
+          <div className="bg-white p-6 rounded-lg shadow-sm border hover:shadow-md transition-shadow">
             <div className="flex items-center justify-between mb-4">
               <Award className="w-8 h-8 text-emerald-600" />
               <Image
@@ -56,8 +54,7 @@ const Certifications = () => {
             </p>
           </div>
 
-          {/* Microsoft Certification */}
-          <div className="bg-white p-6 rounded-lg shadow-sm border transform transition-all duration-300 ease-in-out hover:scale-[1.02] hover:shadow-lg">
+          <div className="bg-white p-6 rounded-lg shadow-sm border hover:shadow-md transition-shadow">
             <div className="flex items-center justify-between mb-4">
               <Award className="w-8 h-8 text-emerald-600" />
               <Image
@@ -77,17 +74,19 @@ const Certifications = () => {
           </div>
         </div>
 
-        {/* Participation Certificates */}
+        {/* Other Certifications */}
         <div className="mt-12">
           <h3 className="text-2xl font-bold text-gray-900 mb-6">
-            {t.certificates.participation.title}
+            {t.language === "it"
+              ? "Attestati di Partecipazione"
+              : "Participation Certificates"}
           </h3>
-          <div className="bg-white p-6 rounded-lg shadow-sm border transform transition-all duration-300 ease-in-out hover:shadow-lg">
+          <div className="bg-white p-6 rounded-lg shadow-sm border">
             <div className="grid grid-cols-1 md:grid-cols-2 gap-8 items-center">
               <div className="relative aspect-[4/3] w-full">
                 <Image
                   src="/images/attestato.jpg"
-                  alt={t.certificates.participation.multimedia_forensics.title}
+                  alt="Attestato Multimedia Forensics"
                   fill
                   className="object-contain"
                   priority
@@ -98,29 +97,26 @@ const Certifications = () => {
                   <Image
                     src="/images/federica.jpg"
                     alt="Federica Web Learning"
-                    width={160}
-                    height={48}
+                    fill
                     className="object-contain"
                   />
                 </div>
-                <h4 className="text-xl font-semibold">
-                  {t.certificates.participation.multimedia_forensics.title}
-                </h4>
+                <h4 className="text-xl font-semibold">Multimedia Forensics</h4>
                 <p className="text-gray-600">
-                  {
-                    t.certificates.participation.multimedia_forensics
-                      .institution
-                  }
+                  {t.language === "it"
+                    ? "Federica Web Learning - Università di Napoli Federico II"
+                    : "Federica Web Learning - University of Naples Federico II"}
                 </p>
-                <p className="text-sm text-gray-500">
-                  {t.certificates.participation.multimedia_forensics.date}
-                </p>
+                <p className="text-sm text-gray-500">8 August 2024</p>
                 <div className="pt-4">
                   <a
                     href="#"
-                    className="inline-flex items-center text-emerald-600 hover:text-emerald-700 transform transition-transform duration-300 hover:translate-x-2"
+                    className="inline-flex items-center text-emerald-600 hover:text-emerald-700"
                   >
-                    {t.certificates.participation.multimedia_forensics.view} →
+                    {t.language === "it"
+                      ? "Visualizza attestato"
+                      : "View certificate"}{" "}
+                    →
                   </a>
                 </div>
               </div>
